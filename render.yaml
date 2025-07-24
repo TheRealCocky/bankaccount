@@ -1,11 +1,9 @@
 services:
   - type: web
     name: bankaccount-api
-    runtime: dotnet
+    runtime: docker
     repo: https://github.com/TheRealCocky/bankaccount
     branch: main
-    buildCommand: dotnet build -c Release
-    startCommand: dotnet BankAccount.dll
     envVars:
       - key: ASPNETCORE_ENVIRONMENT
         value: Production
